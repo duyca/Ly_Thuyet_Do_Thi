@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KSModelStoreContainer" CdmEntityContainer="KSEntities">
+    <EntitySetMapping Name="DichVus">
+      <EntityTypeMapping TypeName="KSModel.DichVu">
+        <MappingFragment StoreEntitySet="DichVu">
+          <ScalarProperty Name="maDichVu" ColumnName="maDichVu" />
+          <ScalarProperty Name="tenDichVu" ColumnName="tenDichVu" />
+          <ScalarProperty Name="donGia" ColumnName="donGia" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DonGias">
+      <EntityTypeMapping TypeName="KSModel.DonGia">
+        <MappingFragment StoreEntitySet="DonGia">
+          <ScalarProperty Name="maLoaiPhong" ColumnName="maLoaiPhong" />
+          <ScalarProperty Name="maHinhThuc" ColumnName="maHinhThuc" />
+          <ScalarProperty Name="donGia1" ColumnName="donGia" />
+          <ScalarProperty Name="keTiep" ColumnName="keTiep" />
+          <ScalarProperty Name="tienQuaGio" ColumnName="tienQuaGio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HinhThucs">
+      <EntityTypeMapping TypeName="KSModel.HinhThuc">
+        <MappingFragment StoreEntitySet="HinhThuc">
+          <ScalarProperty Name="maHinhThuc" ColumnName="maHinhThuc" />
+          <ScalarProperty Name="tenHinhThuc" ColumnName="tenHinhThuc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoaDons">
+      <EntityTypeMapping TypeName="KSModel.HoaDon">
+        <MappingFragment StoreEntitySet="HoaDon">
+          <ScalarProperty Name="maHD" ColumnName="maHD" />
+          <ScalarProperty Name="maPhieu" ColumnName="maPhieu" />
+          <ScalarProperty Name="tongTien" ColumnName="tongTien" />
+          <ScalarProperty Name="ngayLap" ColumnName="ngayLap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhachHangs">
+      <EntityTypeMapping TypeName="KSModel.KhachHang">
+        <MappingFragment StoreEntitySet="KhachHang">
+          <ScalarProperty Name="maKH" ColumnName="maKH" />
+          <ScalarProperty Name="tenKhachHang" ColumnName="tenKhachHang" />
+          <ScalarProperty Name="soXe" ColumnName="soXe" />
+          <ScalarProperty Name="soCMND" ColumnName="soCMND" />
+          <ScalarProperty Name="soDienThoai" ColumnName="soDienThoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiPhongs">
+      <EntityTypeMapping TypeName="KSModel.LoaiPhong">
+        <MappingFragment StoreEntitySet="LoaiPhong">
+          <ScalarProperty Name="maLoaiPhong" ColumnName="maLoaiPhong" />
+          <ScalarProperty Name="tenLoaiPhong" ColumnName="tenLoaiPhong" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhanViens">
+      <EntityTypeMapping TypeName="KSModel.NhanVien">
+        <MappingFragment StoreEntitySet="NhanVien">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuThues">
+      <EntityTypeMapping TypeName="KSModel.PhieuThue">
+        <MappingFragment StoreEntitySet="PhieuThue">
+          <ScalarProperty Name="maPhieu" ColumnName="maPhieu" />
+          <ScalarProperty Name="maPhong" ColumnName="maPhong" />
+          <ScalarProperty Name="maHinhThuc" ColumnName="maHinhThuc" />
+          <ScalarProperty Name="maKhachHang" ColumnName="maKhachHang" />
+          <ScalarProperty Name="gioVao" ColumnName="gioVao" />
+          <ScalarProperty Name="gioTra" ColumnName="gioTra" />
+          <ScalarProperty Name="donGia" ColumnName="donGia" />
+          <ScalarProperty Name="keTiep" ColumnName="keTiep" />
+          <ScalarProperty Name="tienQuaGio" ColumnName="tienQuaGio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Phongs">
+      <EntityTypeMapping TypeName="KSModel.Phong">
+        <MappingFragment StoreEntitySet="Phong">
+          <ScalarProperty Name="maPhong" ColumnName="maPhong" />
+          <ScalarProperty Name="soPhong" ColumnName="soPhong" />
+          <ScalarProperty Name="maLoaiPhong" ColumnName="maLoaiPhong" />
+          <ScalarProperty Name="trangThai" ColumnName="trangThai" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="KSModel.Setting">
+        <MappingFragment StoreEntitySet="Setting">
+          <ScalarProperty Name="KeySetting" ColumnName="KeySetting" />
+          <ScalarProperty Name="valueSetting" ColumnName="valueSetting" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SuDungDichVus">
+      <EntityTypeMapping TypeName="KSModel.SuDungDichVu">
+        <MappingFragment StoreEntitySet="SuDungDichVu">
+          <ScalarProperty Name="maSuDung" ColumnName="maSuDung" />
+          <ScalarProperty Name="maDichVu" ColumnName="maDichVu" />
+          <ScalarProperty Name="maPhieuThue" ColumnName="maPhieuThue" />
+          <ScalarProperty Name="donGia" ColumnName="donGia" />
+          <ScalarProperty Name="soLuong" ColumnName="soLuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_DanhSachSuDungDV" FunctionName="KSModel.Store.sp_DanhSachSuDungDV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KSModel.sp_DanhSachSuDungDV_Result">
+          <ScalarProperty Name="soLuong" ColumnName="soLuong" />
+          <ScalarProperty Name="donGia" ColumnName="donGia" />
+          <ScalarProperty Name="tenDichVu" ColumnName="tenDichVu" />
+          <ScalarProperty Name="maSuDung" ColumnName="maSuDung" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GiamDichVuSuDung" FunctionName="KSModel.Store.sp_GiamDichVuSuDung" />
+    <FunctionImportMapping FunctionImportName="sp_LayDanhSachCaiDat" FunctionName="KSModel.Store.sp_LayDanhSachCaiDat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KSModel.sp_LayDanhSachCaiDat_Result">
+          <ScalarProperty Name="KeySetting" ColumnName="KeySetting" />
+          <ScalarProperty Name="valueSetting" ColumnName="valueSetting" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_LayDanhSachDichVu" FunctionName="KSModel.Store.sp_LayDanhSachDichVu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KSModel.sp_LayDanhSachDichVu_Result">
+          <ScalarProperty Name="maDichVu" ColumnName="maDichVu" />
+          <ScalarProperty Name="tenDichVu" ColumnName="tenDichVu" />
+          <ScalarProperty Name="donGia" ColumnName="donGia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_LayDanhSachHinhThuc" FunctionName="KSModel.Store.sp_LayDanhSachHinhThuc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KSModel.sp_LayDanhSachHinhThuc_Result">
+          <ScalarProperty Name="maHinhThuc" ColumnName="maHinhThuc" />
+          <ScalarProperty Name="tenHinhThuc" ColumnName="tenHinhThuc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_LayDanhSachPhong" FunctionName="KSModel.Store.sp_LayDanhSachPhong">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KSModel.sp_LayDanhSachPhong_Result">
+          <ScalarProperty Name="maPhong" ColumnName="maPhong" />
+          <ScalarProperty Name="soPhong" ColumnName="soPhong" />
+          <ScalarProperty Name="trangThai" ColumnName="trangThai" />
+          <ScalarProperty Name="maLoaiPhong" ColumnName="maLoaiPhong" />
+          <ScalarProperty Name="tenLoaiPhong" ColumnName="tenLoaiPhong" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_LayDonGia" FunctionName="KSModel.Store.sp_LayDonGia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KSModel.sp_LayDonGia_Result">
+          <ScalarProperty Name="donGia" ColumnName="donGia" />
+          <ScalarProperty Name="keTiep" ColumnName="keTiep" />
+          <ScalarProperty Name="tienQuaGio" ColumnName="tienQuaGio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_LayLoaiPhongCuaPhong" FunctionName="KSModel.Store.sp_LayLoaiPhongCuaPhong" />
+    <FunctionImportMapping FunctionImportName="sp_LayThoiGianThem" FunctionName="KSModel.Store.sp_LayThoiGianThem" />
+    <FunctionImportMapping FunctionImportName="sp_LayThongTinPhieuThue" FunctionName="KSModel.Store.sp_LayThongTinPhieuThue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KSModel.sp_LayThongTinPhieuThue_Result">
+          <ScalarProperty Name="maPhieu" ColumnName="maPhieu" />
+          <ScalarProperty Name="gioVao" ColumnName="gioVao" />
+          <ScalarProperty Name="donGia" ColumnName="donGia" />
+          <ScalarProperty Name="keTiep" ColumnName="keTiep" />
+          <ScalarProperty Name="maHinhThuc" ColumnName="maHinhThuc" />
+          <ScalarProperty Name="tenHinhThuc" ColumnName="tenHinhThuc" />
+          <ScalarProperty Name="maKhachHang" ColumnName="maKhachHang" />
+          <ScalarProperty Name="tenKhachHang" ColumnName="tenKhachHang" />
+          <ScalarProperty Name="tienQuaGio" ColumnName="tienQuaGio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ThemDichVuSuDung" FunctionName="KSModel.Store.sp_ThemDichVuSuDung" />
+    <FunctionImportMapping FunctionImportName="sp_TimKhachHangByCMND" FunctionName="KSModel.Store.sp_TimKhachHangByCMND">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KSModel.sp_TimKhachHangByCMND_Result">
+          <ScalarProperty Name="maKH" ColumnName="maKH" />
+          <ScalarProperty Name="tenKhachHang" ColumnName="tenKhachHang" />
+          <ScalarProperty Name="soXe" ColumnName="soXe" />
+          <ScalarProperty Name="soCMND" ColumnName="soCMND" />
+          <ScalarProperty Name="soDienThoai" ColumnName="soDienThoai" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XoaSuDungDichVu" FunctionName="KSModel.Store.sp_XoaSuDungDichVu" />
+    <FunctionImportMapping FunctionImportName="sp_DoiTrangThaiPhong" FunctionName="KSModel.Store.sp_DoiTrangThaiPhong" />
+  </EntityContainerMapping>
+</Mapping>

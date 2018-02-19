@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="21e63a1ba46240dbb7095a02ab148472" Name="Diagram1">
+        <EntityTypeShape EntityType="KSModel.DichVu" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KSModel.DonGia" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KSModel.HinhThuc" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KSModel.HoaDon" Width="1.5" PointX="7.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KSModel.KhachHang" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KSModel.LoaiPhong" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KSModel.NhanVien" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KSModel.PhieuThue" Width="1.5" PointX="5.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KSModel.Phong" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KSModel.Setting" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KSModel.SuDungDichVu" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="KSModel.FK__SuDungDic__maDic__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="KSModel.FK__DonGia__maHinhTh__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="KSModel.FK__DonGia__maLoaiPh__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="KSModel.FK__PhieuThue__maHin__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="KSModel.FK__HoaDon__maPhieu__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="KSModel.FK__PhieuThue__maKha__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="KSModel.FK__Phong__maLoaiPho__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="KSModel.FK__PhieuThue__maPho__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="KSModel.FK__SuDungDic__maPhi__534D60F1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

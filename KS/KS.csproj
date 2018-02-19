@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1383405F-28CF-48E9-9FCA-75501EB841E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KS</RootNamespace>
+    <AssemblyName>KS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Downloads\Trash\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.8.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=12.8.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\ctrlDichVu.cs" />
+    <Compile Include="Controllers\ctrlDonGia.cs" />
+    <Compile Include="Controllers\ctrlHinhThuc.cs" />
+    <Compile Include="Controllers\ctrlKhachHang.cs" />
+    <Compile Include="Controllers\ctrlPhieuThue.cs" />
+    <Compile Include="Controllers\ctrl_Phong.cs" />
+    <Compile Include="Controllers\ctrlSuDungDV.cs" />
+    <Compile Include="Model\DichVu.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DonGia.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DonGiaThue.cs" />
+    <Compile Include="Model\HinhThuc.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HoaDon.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KhachHang.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KSdata.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KSdata.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KSdata.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KSdata.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KSdata.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LoaiPhong.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NhanVien.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PhieuThue.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Phong.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PhongTongHop.cs" />
+    <Compile Include="Model\Setting.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_DanhSachSuDungDV_Result.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_LayDanhSachCaiDat_Result.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_LayDanhSachDichVu_Result.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_LayDanhSachHinhThuc_Result.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_LayDanhSachPhong_Result.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_LayDonGia_Result.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_LayThongTinPhieuThue_Result.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_TimKhachHangByCMND_Result.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SuDungDichVu.cs">
+      <DependentUpon>KSdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ThongTinThue.cs" />
+    <Compile Include="Model\DichVuSuDung.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\HomePage.designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pop-Ups\CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pop-Ups\CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pop-Ups\Rent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pop-Ups\Rent.Designer.cs">
+      <DependentUpon>Rent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pop-Ups\RoomPop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pop-Ups\RoomPop.Designer.cs">
+      <DependentUpon>RoomPop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pop-Ups\RoomType_pop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pop-Ups\RoomType_pop.Designer.cs">
+      <DependentUpon>RoomType_pop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pop-Ups\Service_pop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pop-Ups\Service_pop.Designer.cs">
+      <DependentUpon>Service_pop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SignIn.designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SignUp.designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\History.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Room.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Room.Designer.cs">
+      <DependentUpon>Room.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\RoomType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\RoomType.Designer.cs">
+      <DependentUpon>RoomType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Service.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Service.Designer.cs">
+      <DependentUpon>Service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Setting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pop-Ups\CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pop-Ups\Rent.resx">
+      <DependentUpon>Rent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pop-Ups\RoomPop.resx">
+      <DependentUpon>RoomPop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pop-Ups\RoomType_pop.resx">
+      <DependentUpon>RoomType_pop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pop-Ups\Service_pop.resx">
+      <DependentUpon>Service_pop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Room.resx">
+      <DependentUpon>Room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\RoomType.resx">
+      <DependentUpon>RoomType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Service.resx">
+      <DependentUpon>Service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Model\KSdata.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>KSdata.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\KSdata.edmx.diagram">
+      <DependentUpon>KSdata.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\room-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\room-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Property_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\More Details_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\KSdata.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KSdata.edmx</DependentUpon>
+      <LastGenOutput>KSdata.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\KSdata.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KSdata.edmx</DependentUpon>
+      <LastGenOutput>KSdata.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
